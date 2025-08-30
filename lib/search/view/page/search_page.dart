@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:git_hub_repository_search_app/search/view/widget/input_keyword_field.dart';
 import 'package:git_hub_repository_search_app/search/view/widget/search_result_list.dart';
 
+/// 検索画面
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
 
