@@ -1,3 +1,4 @@
+/// 検索画面イベントの基底クラス
 abstract class SearchEvent {}
 
 /// 検索ボタンが押された時のイベント

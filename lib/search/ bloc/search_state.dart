@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 検索画面状態の規定クラス
+/// 検索画面状態の基底クラス
 sealed class SearchState extends Equatable {}
 
 /// 検索に成功した状態
