@@ -40,6 +40,8 @@ dependencies:
   equatable: ^2.0.7
   # RepositoryやBLoCを伝播させるために使用するパッケージ
   provider: ^6.1.5+1
+  # HTTP通信を行うためのパッケージ
+  http: ^1.5.0
 
 dev_dependencies:
   flutter_test:
