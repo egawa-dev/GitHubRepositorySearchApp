@@ -3,6 +3,7 @@ import 'package:git_hub_repository_search_app/shared/model/git_hub_repo.dart';
 import 'package:git_hub_repository_search_app/shared/model/git_hub_repo_page.dart';
 import 'package:git_hub_repository_search_app/shared/repository/repo/repo_repository_interface.dart';
 
+/// 製品版のGitHubリポジトリのリポジトリ
 class RepoRepositoryProduct implements RepoRepositoryInterface {
   RepoRepositoryProduct({GitHubApiClient? client})
     : client = client ?? GitHubApiClient();

@@ -1,3 +1,4 @@
+/// WebAPIのレスポンス
 class ApiResponse {
   ApiResponse({required this.body, required this.headers});
 
