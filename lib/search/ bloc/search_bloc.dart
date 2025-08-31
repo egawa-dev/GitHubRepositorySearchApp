@@ -34,6 +34,10 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
       // NOTE: 次ページを読み込むために保存
       _searchKeyword = event.keyword;
       final results = await repoRepository.search(keyword: event.keyword);
+      if (results.repos.isEmpty) {
+        emit(SearchSuccessEmpty());
+        return;
+      }
       _currentPage = 1;
       emit(
         SearchSuccess(results: results.repos, hasNextPage: results.hasNextPage),

@@ -38,6 +38,9 @@ class SearchSuccess extends SearchState {
   List<Object?> get props => [results, hasNextPage];
 }
 
+/// 検索に成功したが、結果が0件の状態
+class SearchSuccessEmpty extends SearchState {}
+
 /// 検索が失敗した状態
 class SearchFailure extends SearchState {
   final String error;

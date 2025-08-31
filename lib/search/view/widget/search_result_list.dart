@@ -21,6 +21,8 @@ class SearchResultList extends StatelessWidget {
             return _searchingIndicator();
           case SearchAddLoading(:List<GitHubRepo> results):
             return _SearchResultListView(results: results, isLoading: true);
+          case SearchSuccessEmpty():
+            return _noResultsMessage();
           case SearchSuccess(:List<GitHubRepo> results):
             return _SearchResultListView(results: results, isLoading: false);
           case SearchFailure():
@@ -45,6 +47,14 @@ class SearchResultList extends StatelessWidget {
   // 検索中のインジケーター
   Widget _searchingIndicator() {
     return const Center(child: CircularProgressIndicator());
+  }
+
+  // 検索結果が見つからなかった場合のメッセージ
+  Widget _noResultsMessage() {
+    return Container(
+      alignment: Alignment.topCenter,
+      child: Text("検索結果が見つかりませんでした。", maxLines: 2, overflow: TextOverflow.fade),
+    );
   }
 
   // 検索処理がエラーになった場合のメッセージ
