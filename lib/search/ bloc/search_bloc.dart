@@ -47,6 +47,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     }
   }
 
+  /// 次ページを読み込む位置までスクロールされた時の処理
   Future<void> _onScrollNextPagePosition(
     SearchScrollNextPagePosition event,
     Emitter<SearchState> emit,

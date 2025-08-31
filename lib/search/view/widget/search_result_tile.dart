@@ -5,6 +5,7 @@ import 'package:git_hub_repository_search_app/shared/model/git_hub_repo.dart';
 class SearchResultTile extends StatelessWidget {
   const SearchResultTile({super.key, required this.repo});
 
+  /// リポジトリ情報
   final GitHubRepo repo;
 
   @override
