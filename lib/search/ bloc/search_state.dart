@@ -13,6 +13,16 @@ class SearchInitial extends SearchState {}
 /// 初回データ読み込み中状態
 class SearchInitialLoading extends SearchState {}
 
+/// 追加データ読み込み中状態
+class SearchAddLoading extends SearchState {
+  final List<GitHubRepo> results;
+
+  SearchAddLoading(this.results);
+
+  @override
+  List<Object?> get props => [results];
+}
+
 /// 検索に成功した状態
 class SearchSuccess extends SearchState {
   SearchSuccess({required this.results, required this.hasNextPage});
