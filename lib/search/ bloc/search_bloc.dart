@@ -5,8 +5,7 @@ import 'package:git_hub_repository_search_app/shared/repository/repo/repo_reposi
 
 /// 検索画面のBLoC
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
-  SearchBloc({required this.repoRepository})
-    : super(SearchSuccess(results: [], hasNextPage: false)) {
+  SearchBloc({required this.repoRepository}) : super(SearchInitial()) {
     on<SearchPressedSearchButton>(_onPressedSearchButton);
   }
 
