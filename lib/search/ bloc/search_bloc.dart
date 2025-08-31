@@ -29,7 +29,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
         SearchSuccess(results: results.repos, hasNextPage: results.hasNextPage),
       );
     } catch (_) {
-      // TODO: 失敗状態に遷移
+      emit(SearchFailure("検索に失敗しました。"));
     }
   }
 }
