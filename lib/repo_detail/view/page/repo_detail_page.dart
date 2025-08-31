@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:git_hub_repository_search_app/shared/model/git_hub_repo.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RepoDetailPage extends StatelessWidget {
   const RepoDetailPage({super.key, required this.repo});
@@ -12,11 +13,31 @@ class RepoDetailPage extends StatelessWidget {
       appBar: AppBar(title: Text(repo.name)),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
-        child: Column(
+        child: Stack(
           children: [
-            _User(userName: repo.owner.name, iconUrl: repo.owner.iconUrl),
-            SizedBox(height: 30),
-            Expanded(child: _RepositoryMetadata(repo: repo)),
+            Column(
+              children: [
+                _User(userName: repo.owner.name, iconUrl: repo.owner.iconUrl),
+                SizedBox(height: 30),
+                Expanded(child: _RepositoryMetadata(repo: repo)),
+              ],
+            ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              child: SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    final url = Uri.parse(repo.url);
+                    if (await canLaunchUrl(url)) {
+                      launchUrl(url);
+                    }
+                  },
+                  child: Text("ブラウザで開く"),
+                ),
+              ),
+            ),
           ],
         ),
       ),
