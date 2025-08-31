@@ -46,6 +46,8 @@ dependencies:
   json_annotation: ^4.9.0
   # モックライブラリ
   mocktail: ^1.0.4
+  # URLをブラウザで開くためのパッケージ
+  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_test:
