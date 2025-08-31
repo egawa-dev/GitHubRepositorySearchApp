@@ -13,6 +13,16 @@ class SearchInitial extends SearchState {}
 /// 初回データ読み込み中状態
 class SearchInitialLoading extends SearchState {}
 
+/// 追加データ読み込み中状態
+class SearchAddLoading extends SearchState {
+  final List<GitHubRepo> results;
+
+  SearchAddLoading(this.results);
+
+  @override
+  List<Object?> get props => [results];
+}
+
 /// 検索に成功した状態
 class SearchSuccess extends SearchState {
   SearchSuccess({required this.results, required this.hasNextPage});
@@ -26,4 +36,17 @@ class SearchSuccess extends SearchState {
 
   @override
   List<Object?> get props => [results, hasNextPage];
+}
+
+/// 検索に成功したが、結果が0件の状態
+class SearchSuccessEmpty extends SearchState {}
+
+/// 検索が失敗した状態
+class SearchFailure extends SearchState {
+  final String error;
+
+  SearchFailure(this.error);
+
+  @override
+  List<Object?> get props => [error];
 }
