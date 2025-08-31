@@ -5,8 +5,7 @@ import 'package:git_hub_repository_search_app/shared/repository/repo/repo_reposi
 
 /// 検索画面のBLoC
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
-  SearchBloc({required this.repoRepository})
-    : super(SearchSuccess(results: [], hasNextPage: false)) {
+  SearchBloc({required this.repoRepository}) : super(SearchInitial()) {
     on<SearchPressedSearchButton>(_onPressedSearchButton);
   }
 
@@ -17,6 +16,13 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     SearchPressedSearchButton event,
     Emitter<SearchState> emit,
   ) async {
+    // NOTE: 初回読み込み中状態の際は実行しない
+    if (state is SearchInitialLoading) {
+      return;
+    }
+
+    emit(SearchInitialLoading());
+
     try {
       final results = await repoRepository.search(keyword: event.keyword);
       emit(
