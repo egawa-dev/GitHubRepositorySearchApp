@@ -37,3 +37,13 @@ class SearchSuccess extends SearchState {
   @override
   List<Object?> get props => [results, hasNextPage];
 }
+
+/// 検索が失敗した状態
+class SearchFailure extends SearchState {
+  final String error;
+
+  SearchFailure(this.error);
+
+  @override
+  List<Object?> get props => [error];
+}
