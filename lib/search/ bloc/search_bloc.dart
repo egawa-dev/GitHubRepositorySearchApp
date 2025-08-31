@@ -16,6 +16,13 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     SearchPressedSearchButton event,
     Emitter<SearchState> emit,
   ) async {
+    // NOTE: 初回読み込み中状態の際は実行しない
+    if (state is SearchInitialLoading) {
+      return;
+    }
+
+    emit(SearchInitialLoading());
+
     try {
       final results = await repoRepository.search(keyword: event.keyword);
       emit(

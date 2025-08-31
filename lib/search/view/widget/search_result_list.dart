@@ -16,6 +16,8 @@ class SearchResultList extends StatelessWidget {
         switch (state) {
           case SearchInitial():
             return _initialMessage();
+          case SearchInitialLoading():
+            return _searchingIndicator();
           case SearchSuccess(:List<GitHubRepo> results):
             return ListView.builder(
               itemCount: 3, // TODO: APIで取得した結果数に合わせること
@@ -39,5 +41,10 @@ class SearchResultList extends StatelessWidget {
         overflow: TextOverflow.fade,
       ),
     );
+  }
+
+  // 検索中のインジケーター
+  Widget _searchingIndicator() {
+    return const Center(child: CircularProgressIndicator());
   }
 }

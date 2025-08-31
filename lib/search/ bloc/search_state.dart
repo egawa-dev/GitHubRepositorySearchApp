@@ -10,6 +10,9 @@ sealed class SearchState extends Equatable {
 /// 初期状態
 class SearchInitial extends SearchState {}
 
+/// 初回データ読み込み中状態
+class SearchInitialLoading extends SearchState {}
+
 /// 検索に成功した状態
 class SearchSuccess extends SearchState {
   SearchSuccess({required this.results, required this.hasNextPage});
