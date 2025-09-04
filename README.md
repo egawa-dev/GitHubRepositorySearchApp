@@ -44,3 +44,22 @@ BLoC
 |Android Gradle Plugin|8.9.1|
 |Kotlin|2.1.0|
 |JDK|17.0.16|
+
+## ディレクトリ構成
+
+.
+├── android 
+├── ios
+├── lib
+│   ├── main.dart
+│   ├── <機能名>
+│   │   └── view        // UI
+│   │   ├── bloc        // 状態管理/ビジネスロジック
+│   └── shared          // 全体で共有する機能
+│       ├── data        // データのやりとりを行うレイヤー
+│       ├── model       // データの型・構造
+│       └── repository  // データのやりとりの窓口のレイヤー
+├── pubspec.lock
+├── pubspec.yaml
+├── README.md
+└── test テストコード
