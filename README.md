@@ -63,3 +63,25 @@ BLoC
 ├── pubspec.yaml
 ├── README.md
 └── test テストコード
+
+## 開発環境構築
+
+### Flutterインストール
+
+[Flutter公式のページ](https://docs.flutter.dev/get-started/install)を閲覧してFlutterをインストールしてください。
+
+### パッケージインストール
+
+pubspec.yamlと同ディレクトリにて以下のコマンドを実行して、パッケージをインストールしてください。
+
+```shell
+flutter pub get
+```
+
+### 動作確認
+
+以下のコマンドを実行して、問題なくデバイス上で実行されることを確認してください。
+
+```she
+flutter run
+```
