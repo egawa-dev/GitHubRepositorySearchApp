@@ -85,3 +85,8 @@ flutter pub get
 ```she
 flutter run
 ```
+
+## Git運用
+
+[Git Flow](https://zenn.dev/yukun369/articles/3b286fcb308e33)を使用します。
+(ただし、今回はリリース作業がないため、releaseブランチとhotfixブランチは使用しません。)
