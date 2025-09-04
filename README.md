@@ -39,7 +39,7 @@ BLoC
 |Android Studio|Android Studio Narwhal Feature Drop 2025.1.2 Patch 2|
 |CompileSDK|36|
 |TargetSDK|36|
-|MinSDK|24|
+|MinSDK|36|
 |Gradle Wrapper|8.12|
 |Android Gradle Plugin|8.9.1|
 |Kotlin|2.1.0|
@@ -63,6 +63,13 @@ BLoC
 ├── pubspec.yaml
 ├── README.md
 └── test テストコード
+
+## 対応OS
+
+|OS|対応バージョン|
+|-|-|
+|iOS|18|
+|Android|API36|
 
 ## 開発環境構築
 

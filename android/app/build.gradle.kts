@@ -24,7 +24,7 @@ android {
         applicationId = "com.example.git_hub_repository_search_app"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = 24
+        minSdk = 36
         targetSdk = 36
         versionCode = flutter.versionCode
         versionName = flutter.versionName
