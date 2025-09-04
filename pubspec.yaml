@@ -34,6 +34,20 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  # BLoCアーキテクチャのパッケージ
+  flutter_bloc: ^9.1.1
+  # インスタンスの比較を行うためのパッケージ
+  equatable: ^2.0.7
+  # RepositoryやBLoCを伝播させるために使用するパッケージ
+  provider: ^6.1.5+1
+  # HTTP通信を行うためのパッケージ
+  http: ^1.5.0
+  # JSONを扱いやすくするためのパッケージ
+  json_annotation: ^4.9.0
+  # モックライブラリ
+  mocktail: ^1.0.4
+  # URLをブラウザで開くためのパッケージ
+  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +59,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+
+  # コード生成を行うためのパッケージ
+  build_runner: ^2.7.0
+  # JSONを扱いやすくするためのパッケージ
+  json_serializable: ^6.11.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
