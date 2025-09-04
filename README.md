@@ -47,22 +47,25 @@ BLoC
 
 ## ディレクトリ構成
 
-.
-├── android 
-├── ios
-├── lib
-│   ├── main.dart
-│   ├── <機能名>
-│   │   └── view        // UI
-│   │   ├── bloc        // 状態管理/ビジネスロジック
-│   └── shared          // 全体で共有する機能
-│       ├── data        // データのやりとりを行うレイヤー
-│       ├── model       // データの型・構造
-│       └── repository  // データのやりとりの窓口のレイヤー
-├── pubspec.lock
-├── pubspec.yaml
-├── README.md
-└── test テストコード
+
+```
+.  
+├── android   
+├── ios  
+├── lib  
+│   ├── main.dart  
+│   ├── <機能名>  
+│   │   └── view        // UI  
+│   │   ├── bloc        // 状態管理/ビジネスロジック  
+│   └── shared          // 全体で共有する機能  
+│       ├── data        // データのやりとりを行うレイヤー  
+│       ├── model       // データの型・構造  
+│       └── repository  // データのやりとりの窓口のレイヤー  
+├── pubspec.lock  
+├── pubspec.yaml  
+├── README.md  
+└── test                // テストコード  
+```
 
 ## 開発環境構築
 
