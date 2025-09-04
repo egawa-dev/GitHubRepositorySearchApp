@@ -20,14 +20,27 @@ BLoC
 
 ### Flutter
 
-| 言語・フレームワーク等     | バージョン  |
-| ---------------------- | ---------- |
-| Flutter                |  3.35.2    |
-| Dart                   |  3.9.0     |
+|項目|バージョン|
+|-|-|
+|Flutter|3.35.2|
+|Dart|3.9.0|
 
 ### iOS
 
-| 言語・フレームワーク等     |バージョン   |
-| ---------------------- | ---------- |
-| Xcode                  |16.4.0      |
-| CocoaPods              |1.16.2      |
+|項目|バージョン|
+|-|-|
+|Xcode|16.4.0|
+|CocoaPods|1.16.2|
+
+### Android
+
+|項目|バージョン|
+|-|-|
+|Android Studio|Android Studio Narwhal Feature Drop 2025.1.2 Patch 2|
+|CompileSDK|36|
+|TargetSDK|36|
+|MinSDK|24|
+|Gradle Wrapper|8.12|
+|Android Gradle Plugin|8.9.1|
+|Kotlin|2.1.0|
+|JDK|17.0.16|
